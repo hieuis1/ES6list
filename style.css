@@ -1,0 +1,27 @@
+.tab-item {
+  width: 25%;
+}
+.hide {
+  display: none;
+}
+.nav_container {
+  margin-top: 100px;
+}
+form {
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.add {
+  width: 100%;
+}
+.trash {
+  color: red;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.edit {
+  color: green;
+  margin-left: 10px;
+  cursor: pointer;
+}
