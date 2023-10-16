@@ -39,21 +39,33 @@
     <div class="list__person">
       <div class="container">
         <div class="hide" id="employees" class="item">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <div class="sortAndSearch">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="searchEmployee"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <label for="">Sắp xếp</label>
+            <select id="sortEm">
+              <option value="">---</option>
+              <option value="than">Tăng dần</option>
+              <option value="left">
+                Giảm dần
+                <nav></nav>
+              </option>
+            </select>
+          </div>
           <div class="modalBtn">
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary mt-3 mb-2"
               data-bs-toggle="modal"
               data-bs-target="#modalEmployee"
             >
@@ -155,22 +167,34 @@
           </table>
         </div>
         <div id="students">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <div class="sortAndSearch">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="searchStudent"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <label for="">Sắp xếp</label>
+            <select id="sortSt">
+              <option value="">---</option>
+              <option value="than">Tăng dần</option>
+              <option value="left">
+                Giảm dần
+                <nav></nav>
+              </option>
+            </select>
+          </div>
           <div class="modalBtn">
             <!-- Button trigger modal -->
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary mt-3 mb-2"
               data-bs-toggle="modal"
               data-bs-target="#modalStudent"
             >
@@ -268,22 +292,35 @@
             <tbody id="listStudent"></tbody>
           </table>
         </div>
+
         <div class="hide" id="customers">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <div class="sortAndSearch">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="searchCustomer"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <label for="">Sắp xếp</label>
+            <select id="sortCu">
+              <option value="">---</option>
+              <option value="than">Tăng dần</option>
+              <option value="left">
+                Giảm dần
+                <nav></nav>
+              </option>
+            </select>
+          </div>
           <!-- Button trigger modal -->
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-primary mt-3 mb-2"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >

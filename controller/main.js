@@ -16,11 +16,16 @@ import {
   addEmployee,
   getCustomer,
   addCustomer,
+  editStudent,
 } from "../model/callData.js";
+
 const addNewStudent = document.getElementById("addst");
 const addNewEmployee = document.getElementById("addem");
 const addNewCustomer = document.getElementById("addcm");
-
+const editStudentBtn = document.getElementById("editStudentBtn");
+const sortCu = document.getElementById("sortCu");
+const sortEM = document.getElementById("sortEM");
+const sortSt = document.getElementById("sortSt");
 console.log(addNewEmployee);
 navList.forEach((item) => {
   item.addEventListener("click", () => {
@@ -40,7 +45,6 @@ addNewStudent.addEventListener("click", () => {
   let ly = +document.getElementById("lyst").value;
   let hoa = +document.getElementById("hoast").value;
   let student = createStudent(ma, name, address, email, toan, ly, hoa);
-  console.log(student);
   if (student) {
     addStudent(student);
   }
@@ -57,18 +61,5 @@ addNewEmployee.addEventListener("click", () => {
   if (employee) {
     addEmployee(employee);
   }
-});
-
-addNewCustomer.addEventListener("click", () => {
-  let ma = +document.getElementById("idcu").value;
-  let name = document.getElementById("namecu").value;
-  let address = document.getElementById("diachicu").value;
-  let email = document.getElementById("emailcu").value;
-  let ct = document.getElementById("ctcu").value;
-  let money = +document.getElementById("moneycu").value;
-  let cm = document.getElementById("cmcu").value;
-  let customer = createCustomer(ma, name, address, email, ct, money, cm);
-  if (customer) {
-    addCustomer(customer);
-  }
+  document.getElementById("editStudent").classList.add("hide");
 });

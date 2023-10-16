@@ -39,7 +39,54 @@ export function removeHide(item) {
             <th>${item.hoa}</th>
             <th>
               <i class="fa-solid fa-trash trash" onclick="removeSt(${item.id})"></i>
-              <i class="fa-solid fa-pen-to-square edit"></i>
+              <i class="fa-solid fa-pen-to-square edit" data-bs-toggle="modal" data-bs-target="#editStudent" onclick="stEdit(${item.id})"></i>
+              <!-- Modal -->
+              <div class="modal fade" id="editStudent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="add">
+                          <div class="mb-3">
+                            <label class="form-label">Nhập mã</label>
+                            <input type="email" class="form-control" id="editStID" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập tên</label>
+                            <input  class="form-control" id="editStName">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập địa chỉ</label>
+                            <input  class="form-control" id="editStAddress">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập Email</label>
+                            <input  class="form-control" id="editStEmail">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập điểm toán</label>
+                            <input  class="form-control" id="editStToan">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập điểm lý</label>
+                            <input  class="form-control" id="editStLy">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập điểm hóa</label>
+                            <input  class="form-control" id="editStHoa">
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="editStudentBtn" onclick="addEditSt(${item.id})" data-bs-dismiss="modal">Lưu thay đổi</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </th>
           </tr>
           `;
@@ -65,7 +112,50 @@ export function removeHide(item) {
             <th>${item.salary}</th>
             <th>
               <i class="fa-solid fa-trash trash" onclick="removeEm(${item.id})"></i>
-              <i class="fa-solid fa-pen-to-square edit"></i>
+              <i class="fa-solid fa-pen-to-square edit" data-bs-toggle="modal" data-bs-target="#editEmployee" onclick="emEdit(${item.id})"></i>
+              <!-- Modal -->
+              <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sửa nhân viên</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="add">
+                          <div class="mb-3">
+                            <label class="form-label">Nhập mã</label>
+                            <input type="email" class="form-control" id="editEmID" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập tên</label>
+                            <input  class="form-control" id="editEmName">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập địa chỉ</label>
+                            <input  class="form-control" id="editEmAddress">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập Email</label>
+                            <input  class="form-control" id="editEmEmail">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập ngày làm</label>
+                            <input  class="form-control" id="editEmDay">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Nhập lương</label>
+                            <input  class="form-control" id="editEmSalary">
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="addEditEm(${item.id})"  data-bs-dismiss="modal" >Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </th>
           </tr>
           `;
@@ -92,7 +182,55 @@ export function removeHide(item) {
             <th>${item.comment}</th>
             <th>
               <i class="fa-solid fa-trash trash" onclick="removeCu(${item.id})"></i>
-              <i class="fa-solid fa-pen-to-square edit"></i>
+              <i class="fa-solid fa-pen-to-square edit" data-bs-toggle="modal" data-bs-target="#editCustomer" onclick="cuEdit(${item.id})"></i>
+
+
+              <div class="modal fade" id="editCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sửa nhân viên</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="add">
+                        <div class="mb-3">
+                          <label class="form-label">Nhập mã</label>
+                          <input type="email" class="form-control" id="editCuID" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập tên</label>
+                          <input  class="form-control" id="editCuName">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập địa chỉ</label>
+                          <input  class="form-control" id="editCuAddress">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập Email</label>
+                          <input  class="form-control" id="editCuEmail">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập ngày làm</label>
+                          <input  class="form-control" id="editCuCp">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập lương</label>
+                          <input  class="form-control" id="editCuMoney">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Nhập lương</label>
+                          <input  class="form-control" id="editCuCm">
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="addEditCu(${item.id})">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             </th>
           </tr>
           `;
